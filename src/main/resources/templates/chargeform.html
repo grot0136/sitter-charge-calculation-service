@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Nightly Charge Calculator</h1>
+    <form action="#"
+          th:action="@{/chargeform}"
+          th:object="${appointment}"
+          method="post">
+        <label for="arrivaltime">Arrival Time : </label>
+        <input type="time" id="arrivaltime" th:field="*{beginTime}" />
+        <span th:if="${#fields.hasErrors('beginTime')}"
+              th:errors="*{beginTime}"></span><br />
+        <label for="departuretime">Departure Time : </label>
+        <input type="time" id="departuretime" th:field="*{endTime}" />
+        <span th:if="${#fields.hasErrors('endTime')}"
+              th:errors="*{endTime}"></span><br />
+        <label for="bedtime">Bed Time : </label>
+        <input type="time" id="bedtime" th:field="*{bedTime}" />
+        <span th:if="${#fields.hasErrors('bedTime')}"
+              th:errors="*{bedTime}"></span><br />
+        <input type="submit" value="Calculate">
+    </form>
+</body>
+</html>
