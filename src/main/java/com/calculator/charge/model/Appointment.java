@@ -20,6 +20,15 @@ public class Appointment {
 
     private int chargeAmount;
 
+    public Appointment(LocalTime beginTime, LocalTime bedTime, LocalTime endTime ) {
+        this.beginTime = beginTime;
+        this.bedTime = bedTime;
+        this.endTime = endTime;
+    }
+
+    public Appointment() {
+    }
+
     public LocalTime getBeginTime() {
         return beginTime;
     }
