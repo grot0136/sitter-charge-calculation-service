@@ -8,17 +8,17 @@ import java.sql.Timestamp;
 import java.time.LocalTime;
 
 public class Appointment {
-    @NotNull
+
     @DateTimeFormat(iso = DateTimeFormat.ISO.TIME)
     private LocalTime beginTime;
 
-    @NotNull
     @DateTimeFormat(iso = DateTimeFormat.ISO.TIME)
     private LocalTime bedTime;
 
-    @NotNull
     @DateTimeFormat(iso = DateTimeFormat.ISO.TIME)
     private LocalTime endTime;
+
+    private int chargeAmount;
 
     public LocalTime getBeginTime() {
         return beginTime;
@@ -44,4 +44,11 @@ public class Appointment {
         this.endTime = endTime;
     }
 
+    public int getChargeAmount() {
+        return chargeAmount;
+    }
+
+    public void setChargeAmount(int chargeAmount) {
+        this.chargeAmount = chargeAmount;
+    }
 }
