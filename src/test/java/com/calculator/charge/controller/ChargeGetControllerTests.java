@@ -24,8 +24,6 @@ public class ChargeGetControllerTests {
     @Test
     public void getExampleTest() {
         String body = this.testRestTemplate.getForObject("/chargeform", String.class);
-        System.out.println("BODY INCOMING!!!");
-        System.out.println(body);
         assert(body.contains("Nightly Charge Calculator"));
     }
 
