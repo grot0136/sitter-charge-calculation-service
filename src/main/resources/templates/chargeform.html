@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Nightly Charge Calculator</title>
 </head>
 <body>
     <h1>Nightly Charge Calculator</h1>
@@ -12,15 +12,15 @@
           method="post">
         <label for="arrivaltime">Start Time : </label>
         <input type="time" id="arrivaltime" th:field="*{beginTime}" />
-        <span th:if="${#fields.hasErrors('beginTime')}"
+        <span th:if="${#fields.hasErrors('beginTime')}" style="color:red"
               th:errors="*{beginTime}"></span><br />
         <label for="departuretime">End Time : </label>
         <input type="time" id="departuretime" th:field="*{endTime}" />
-        <span th:if="${#fields.hasErrors('endTime')}"
+        <span th:if="${#fields.hasErrors('endTime')}"  style="color:red"
               th:errors="*{endTime}"></span><br />
         <label for="bedtime">Bed Time : </label>
         <input type="time" id="bedtime" th:field="*{bedTime}" />
-        <span th:if="${#fields.hasErrors('bedTime')}"
+        <span th:if="${#fields.hasErrors('bedTime')}" style="color:red"
               th:errors="*{bedTime}"></span><br />
         <input type="submit" value="Calculate">
     </form>
