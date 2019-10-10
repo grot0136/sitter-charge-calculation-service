@@ -10,11 +10,11 @@
           th:action="@{/chargeform}"
           th:object="${appointment}"
           method="post">
-        <label for="arrivaltime">Arrival Time : </label>
+        <label for="arrivaltime">Start Time : </label>
         <input type="time" id="arrivaltime" th:field="*{beginTime}" />
         <span th:if="${#fields.hasErrors('beginTime')}"
               th:errors="*{beginTime}"></span><br />
-        <label for="departuretime">Departure Time : </label>
+        <label for="departuretime">End Time : </label>
         <input type="time" id="departuretime" th:field="*{endTime}" />
         <span th:if="${#fields.hasErrors('endTime')}"
               th:errors="*{endTime}"></span><br />
