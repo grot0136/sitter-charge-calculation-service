@@ -9,6 +9,8 @@
 
     <bean id="chargeService" class="com.calculator.charge.service.BabySitterChargeService" />
 
+    <bean id="validator" class="com.calculator.charge.validator.AppointmentValidator" />
+
     <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource"
           p:basename="/resources/messages"/>
 
