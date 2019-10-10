@@ -9,7 +9,7 @@ Install steps
 
 
 
-####Calculator description
+#### Calculator description
 A babysitter:
 - starts no earlier than 5:00PM 
 - leaves no later than 4:00AM
