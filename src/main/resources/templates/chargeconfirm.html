@@ -6,7 +6,8 @@
 </head>
 <body>
     <p th:inline="text">
-        Your charge for the night is 0
+        Your charge for the night is: <h1 th:text="'$' + ${appointment.chargeAmount}"></h1>
     </p>
+    <a href="/chargeform">Calculate charge for another night</a>
 </body>
 </html>
