@@ -67,7 +67,7 @@ public class AppointmentValidator implements Validator {
                     isBedTimeInvalid = true;
                 }
             }
-            if(appointment.getBeginTime().isBefore(appointment.getEndTime())) {
+            else if(appointment.getBeginTime().isBefore(appointment.getEndTime())) {
                 //if begin and end are in same time of day but bed time is not in between those times, fail
                 if(appointment.getBedTime().isAfter(appointment.getEndTime()) ||
                         appointment.getBedTime().isBefore(appointment.getBeginTime())) {
